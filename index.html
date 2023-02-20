@@ -10,11 +10,12 @@
     <script src="js/script.js" defer></script> <!-- Defer faz o script carregar depois do HTML -->
     <title>To Do List</title>
 </head>
-<body>
+<body class="gradient">
     <div class="todo-container">
         <header>
             <h1>To Do List</h1>
         </header>
+
         <form id="todo-form">
             <p>Adicionar tarefa: </p>
             <div class="form-control">
@@ -24,16 +25,18 @@
                 </button>
             </div>
         </form>
-        <form id="edit-form">
+
+        <form id="edit-form" class="hide">
             <p>Editar tarefa: </p>
             <div class="form-control">
                 <input type="text" id="edit-input">
-                <button>
+                <button type="submit">
                     <i class="fa-solid fa-check-double"></i>
                 </button>
             </div>
             <button id="cancel-edit-btn">Cancelar Edição</button>
         </form>
+
         <div id="toolbar">
             <div id="search">
                 <h4>Pesquisar:</h4>
@@ -55,7 +58,7 @@
         </div>
 
         <div id="todo-list">
-            <div class="todo">
+            <div class="todo done">
                 <h3>Estou fazendo algo...</h3>
                 <button class="finish-todo">
                     <i class="fa-solid fa-check"></i>

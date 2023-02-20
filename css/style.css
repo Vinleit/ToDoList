@@ -1,17 +1,16 @@
+/* GERAL */
 * {
     padding: 0;
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
+.gradient {
     background-image: linear-gradient(45deg,rgb(14, 80, 202),rgb(65, 65, 196), rgb(111, 13, 202) ,rgb(130, 15, 175));
     background-size: 200% 200%;
     animation: cores 15s ease infinite;
+    margin: 0;
 }
 
 @keyframes cores{
@@ -53,4 +52,120 @@ button:hover > i {
 button i {
     color: #102f5e;
     font-weight: bold;
+    pointer-events: none; /* Resolvendo o problema de clicar no ícone ao invés do botão */
+}
+
+input, select{
+    padding: 0.25rem 0.5rem;
+}
+
+.hide{ /* Classe usada para esconder o form de edição */
+    display: none;
+}
+
+/* TODO HEADER */
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #FDFDFD;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #CCC;
+}
+
+/* TO DO FORM */
+#todo-form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #CCC;
+}
+
+#todo-form p, #edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 0.7rem;
+}
+
+/* TO DO TOOLBAR*/
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #CCC;
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+}
+
+#search {
+    border-right: 1px solid #DDD;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    flex: 1; /* Preencher toda a área disponível*/
+}
+
+/* TO DO LIST*/
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.todo h3{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button {
+    margin-left: 0.7rem;
+}
+
+.done {
+    background-color: #57a532;
+    border-radius: 7px;
+}
+
+.done h3{
+    color: #FFF;
+    text-decoration: line-through;
+    font-style: italic;
 }
