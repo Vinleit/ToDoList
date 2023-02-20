@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(45deg,rgb(14, 80, 202),rgb(65, 65, 196), rgb(111, 13, 202) ,rgb(130, 15, 175));
+    background-size: 200% 200%;
+    animation: cores 15s ease infinite;
+}
+
+@keyframes cores{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+button {
+    background-color: #FDFDFD;
+    color: #102f5e;
+    border:2px solid #102f5e;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #102f5e;
+    color: #FFF;
+}
+
+button:hover > i {
+    color: #FFF;
+}
+
+button i {
+    color: #102f5e;
+    font-weight: bold;
+}
